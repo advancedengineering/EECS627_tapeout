@@ -171,7 +171,7 @@ always_ff @ (posedge clk or negedge resetn)begin
                     if(|pool_rd_en[i]) begin
                         if(SA_addr_cnt[i] + 1 == SA_addr_cnt_max[i]) begin
                             SA_addr_cnt[i] <= '0;
-                            SA_base_addr0[i] <= SA_base_addr0[i] + SA_addr_cnt_max[0] + SA_addr_cnt_max[1] + SA_addr_cnt_max[2];
+                            SA_base_addr0[i] <= SA_base_addr0[i] + SA_addr_cnt_max[i]*SA_num;
                         end else begin
                             SA_addr_cnt[i] <= SA_addr_cnt[i] + 1;
                         end

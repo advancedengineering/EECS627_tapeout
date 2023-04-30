@@ -82,14 +82,14 @@ models:
 	cd lib; pt_shell -f SRAM_template.lib.tcl | tee SRAM_template.log
 
 copy_from_apr:
-	cp $(G3_PATH)/TSMC_SA_array_part_lzc/apr/SA_array_part.lib $(G3_PATH)/TSMC_integration_lzc/lib
+	cp $(G3_PATH)/TSMC_SA_array_part/apr/SA_array_part.lib $(G3_PATH)/TSMC_integration_lzc/lib
 	cp $(G3_PATH)/TSMC_write_back/apr/write_back_part.lib $(G3_PATH)/TSMC_integration_lzc/lib
 	cp $(G3_PATH)/TSMC_Controller/apr/controller.lib $(G3_PATH)/TSMC_integration_lzc/lib
 	cp $(G3_PATH)/TSMC_Shifter/apr/shifter.lib $(G3_PATH)/TSMC_integration_lzc/lib
 	cp $(G3_PATH)/TSMC_SRAM/sram_apr17/compout/views/$(SRAM_TOP)/Typical/$(SRAM_TOP).lib $(G3_PATH)/TSMC_integration_lzc/lib/sram.lib
 	cp $(G3_PATH)/virtuoso_example/digital/Ring/apr/Ring.lib $(G3_PATH)/TSMC_integration_lzc/lib
 
-	cp $(G3_PATH)/TSMC_SA_array_part_lzc/apr/SA_array_part.lef $(G3_PATH)/TSMC_integration_lzc/lef
+	cp $(G3_PATH)/TSMC_SA_array_part/apr/SA_array_part.lef $(G3_PATH)/TSMC_integration_lzc/lef
 	cp $(G3_PATH)/TSMC_write_back/apr/write_back_part.lef $(G3_PATH)/TSMC_integration_lzc/lef
 	cp $(G3_PATH)/TSMC_Controller/apr/controller.lef $(G3_PATH)/TSMC_integration_lzc/lef
 	cp $(G3_PATH)/TSMC_Shifter/apr/shifter.lef $(G3_PATH)/TSMC_integration_lzc/lef
@@ -140,13 +140,13 @@ check:
 	@ echo " "
 
 cp_cdl: 
-	cp $(G3_PATH)/TSMC_SA_array_part_lzc/apr/SA_array_part.cdl $(G3_PATH)/TSMC_integration_lzc/v2lvs
+	cp $(G3_PATH)/TSMC_SA_array_part/apr/SA_array_part.cdl $(G3_PATH)/TSMC_integration_lzc/v2lvs
 	cp $(G3_PATH)/TSMC_write_back/apr/write_back_part.cdl $(G3_PATH)/TSMC_integration_lzc/v2lvs
 	cp $(G3_PATH)/TSMC_Controller/apr/controller.cdl $(G3_PATH)/TSMC_integration_lzc/v2lvs
 	cp $(G3_PATH)/TSMC_Shifter/apr/shifter.cdl $(G3_PATH)/TSMC_integration_lzc/v2lvs
 	cp $(G3_PATH)/virtuoso_example/digital/Ring/apr/Ring.cdl $(G3_PATH)/TSMC_integration_lzc/v2lvs
 
-	cp $(G3_PATH)/TSMC_SA_array_part_lzc/apr/SA_array_part.apr.pg.v $(G3_PATH)/TSMC_integration_lzc/v2lvs
+	cp $(G3_PATH)/TSMC_SA_array_part/apr/SA_array_part.apr.pg.v $(G3_PATH)/TSMC_integration_lzc/v2lvs
 	cp $(G3_PATH)/TSMC_write_back/apr/write_back_part.apr.pg.v $(G3_PATH)/TSMC_integration_lzc/v2lvs
 	cp $(G3_PATH)/TSMC_Controller/apr/controller.apr.pg.v $(G3_PATH)/TSMC_integration_lzc/v2lvs
 	cp $(G3_PATH)/TSMC_Shifter/apr/shifter.apr.pg.v $(G3_PATH)/TSMC_integration_lzc/v2lvs
